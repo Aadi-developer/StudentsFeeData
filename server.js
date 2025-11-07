@@ -33,7 +33,7 @@ const studentSchema = new mongoose.Schema({
 // Third argument is **existing collection name**
 const Student = mongoose.model("Student", studentSchema, "Section_A");
 
-// Route to check fee
+//route to check fee card 
 app.get("/check-fee", async (req, res) => {
   try {
     const { name, email } = req.query;
@@ -69,3 +69,4 @@ app.get("/check-fee", async (req, res) => {
 });
 
 app.listen(PORT, ()=> console.log(`Server running on http://localhost:${PORT}`));
+
